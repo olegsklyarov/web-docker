@@ -6,6 +6,7 @@ services:
     container_name: web-docker-php-fpm
     working_dir: /application
     volumes:
+      - ./php-fpm/php.ini:/usr/local/etc/php/php.ini
       - ./application:/application
 
   nginx:
